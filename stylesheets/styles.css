@@ -1,0 +1,655 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption,
+figure, footer, header, hgroup,
+menu, nav, section, summary {
+  display: block;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #5c3e52;
+}
+
+h2, h3 {
+  font-weight: 200;
+}
+
+h2 {
+  font-size: 36px;
+  text-align: left;
+}
+
+h3 {
+  font-size: 25px;
+  text-align: center;
+}
+
+.wrap {
+  width: 1020px;
+  margin: 0 auto;
+  height: 100vh;
+  padding: 0px 0 100px;
+  overflow: hidden;
+  text-align: center;
+}
+
+#diamond-grid {
+  padding-top: 5em;
+}
+
+.work-header {
+  text-align: center;
+  clear: both;
+  margin: 2em 0 1em;
+}
+
+.resume {
+  height: 100%;
+  padding: 0;
+}
+
+.resume-download {
+  text-align: center;
+  display: block;
+  margin-bottom: 2em;
+}
+
+#download-resume {
+  display: block;
+  text-align: center;
+}
+
+a {
+  color: #24a59e;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #1b7b76;
+}
+
+.caption {
+  max-width: 810px;
+  margin: 2em auto 3em;
+}
+
+.portfolio-pic {
+  float: left;
+  margin: 0 3em 0 0;
+}
+
+/************ NAVBAR *************/
+
+.inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0px 20px;
+  position: relative;
+}
+
+.logo img {
+  margin-top: 5px;
+}
+
+nav {
+  margin: 2em 0;
+}
+
+nav a {
+  color: white;
+}
+
+nav > ul {
+  float: right;
+}
+
+nav > ul > li {
+  text-align: center;
+  line-height: 40px;
+  margin-left: 70px;
+}
+
+nav > ul li ul li {
+  width: 100%;
+  text-align: left;
+}
+
+nav ul li:hover {
+  cursor: pointer;
+  position: relative;
+}
+nav ul li:hover > ul {
+  display: block;
+}
+nav ul li:hover > a {
+  color: #777;
+}
+nav > ul > li > a {
+  cursor: pointer;
+  display: block;
+  outline: none;
+  width: 100%;
+  text-decoration: none;
+  font-size: .75em;
+}
+
+nav > ul > li {
+  float: left;
+}
+
+nav > ul li ul {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  z-index: 2000;
+}
+nav > ul li ul li > a {
+  text-decoration: none;
+}
+
+[type="checkbox"], label {
+  display: none;
+}
+
+@media screen and (max-width: 950px) {
+	label {
+    display: block;
+    background: #fff;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 0px;
+	}
+
+  label:after{
+    content:'';
+    display: block;
+    width: 30px;
+    height: 5px;
+    background: #777;
+    margin: 7px 5px;
+    box-shadow: 0px 10px 0px #777, 0px 20px 0px #777
+  }
+
+	[type="checkbox"]:checked ~ ul {
+    display: block;
+    z-index: 9999;
+    position: absolute;
+    right: 20px;
+    left: 20px;
+	}
+
+	nav a {
+    color: #383838;
+	}
+
+  nav ul {
+    display: none;
+	}
+
+	nav ul li {
+    display: block;
+    float: none;
+    width: 100%;
+    text-align: left;
+    background: #383838;
+    text-indent: 20px;
+	}
+
+	nav > ul > li {
+    margin-left: 0px;
+	}
+
+	nav > ul li ul li {
+    display: block;
+    float: none;
+	}
+
+	nav > ul li ul {
+    display: inline-flex;
+    position: relative;
+    width: 100%;
+    z-index: 9999;
+    float: none;
+	}
+}
+
+.inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0px 20px;
+  position: relative;
+}
+
+nav > ul {
+  float: right;
+  list-style: none;
+}
+
+nav > ul > li {
+  text-align: center;
+  line-height: 40px;
+  margin-left: 70px;
+  font-size: 1.3em;
+}
+
+nav > ul li ul li {
+  width: 100%;
+  text-align: left;
+}
+
+nav ul li:hover {
+  cursor: pointer;
+  position: relative;
+}
+
+nav ul li:hover > ul {
+  display: block;
+}
+
+nav ul li:hover > a {
+  color: #24a59e;
+}
+
+nav > ul > li > a {
+  cursor: pointer;
+  display: block;
+  outline: none;
+  width: 100%;
+  text-decoration: none;
+}
+
+nav > ul > li {
+  float: left;
+}
+nav a {
+  color: #383838;
+}
+nav > ul li ul {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  z-index: 2000;
+}
+nav > ul li ul li > a {
+  text-decoration: none;
+}
+
+[type="checkbox"], label {
+  display: none;
+}
+
+@media screen and (max-width: 950px) {
+	nav ul {
+    display: none;
+	}
+
+	label[for="nav"] {
+    display: block;
+    background: #fff;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 0px;
+	}
+
+  label[for="nav"]:after{
+    content:'';
+    display: block;
+    width: 30px;
+    height: 5px;
+    background: #777;
+    margin: 7px 5px;
+    box-shadow: 0px 10px 0px #777, 0px 20px 0px #777
+  }
+
+	[type="checkbox"]:checked ~ ul {
+    display: inline-flex;
+    z-index: 9999;
+    position: absolute;
+    right: 25px;
+    left: 18px;
+    margin-top: 52px;
+	}
+
+	nav a {
+    color: #777;
+	}
+
+	nav ul li {
+    display: block;
+    float: none;
+    width: 100%;
+    text-align: left;
+    background: #222;
+    text-indent: 20px;
+	}
+
+	nav > ul > li {
+    margin-left: 0px;
+    text-align: center;
+	}
+
+	nav > ul li ul li {
+    display: block;
+    float: none;
+	}
+
+	nav > ul li ul {
+    display: block;
+    position: relative;
+    width: 100%;
+    z-index: 9999;
+    float: none;
+	}
+
+  #resume-link {
+    margin: 0 1em 0 -0.5em;
+  }
+
+  #index-link {
+    margin: 0 1em 0 0;
+  }
+
+  #contact-link {
+    margin: 0 1em 0 0;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  [type="checkbox"]:checked ~ ul {
+    display: block;
+    margin-top: 10px;
+	}
+
+  #resume-link {
+    margin: 0;
+  }
+
+  #index-link {
+    margin: 0;
+  }
+
+  #contact-link {
+    margin: 0;
+  }
+
+  .portfolio-pic {
+    float: none;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .about-me p {
+    margin: 2em 0 0;
+  }
+}
+
+/**************************************/
+
+.diamond {
+  display: block;
+  float: left;
+  color: #fff;
+  font-size: 1.5em;
+  text-decoration: none;
+  background: #494949;
+  margin-left: 73px;
+  margin-top: -39px;
+  width: 150px;
+  height: 150px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.odd {
+  clear: left;
+  margin-left: 49px;
+}
+
+.thumb {
+  background-color: #ddd;
+  position: relative;
+  overflow: hidden;
+}
+
+.thumb:after {
+  content: "";
+  position: absolute;
+  top: -56px;
+  left: -18px;
+  width: 250px;
+  height: 250px;
+  background: inherit;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  opacity: 1;
+}
+
+.even {
+  clear: left;
+  margin-left: 161px;
+}
+
+.diamond p {
+  position: relative;
+  line-height: 215px;
+  z-index: 1;
+  -webkit-transform-origin: top left;
+  -moz-transform-origin: top left;
+  transform-origin: top left;
+  -webkit-transform: rotate(-45deg) translate(-75px, 0);
+  -moz-transform: rotate(-45deg) translate(-75px, 0);
+  transform: rotate(-45deg) translate(-75px, 0);
+}
+
+.empty {
+  background: transparent;
+}
+
+.solid-empty {
+  background: #24a59e;
+}
+
+.thumb:hover {
+  filter: brightness(70%);
+}
+
+.no-csstransforms h3 {
+  margin-bottom: 5em;
+}
+
+.no-csstransforms .diamond {
+  margin-left: 0;
+  margin-top: 0;
+}
+
+.no-csstransforms .even {
+  margin-left: 197px;
+}
+
+.no-csstransforms .odd {
+  margin-left: 108px;
+}
+
+.no-csstransforms .diamond p {
+  line-height: 150px;
+}
+
+.contact-msg {
+  margin: 0 0 2em;
+  text-align: center;
+}
+
+/**************** TILE PICS *******************/
+
+#nili {
+  background: url(../images/nili.jpg) no-repeat -50px -40px;
+}
+
+#prm {
+  background: url(../images/prm.jpg) no-repeat -50px -50px;
+}
+
+#ledlenser {
+  background: url(../images/ledlenser.jpg) no-repeat -50px -40px;
+}
+
+#sizzlepie {
+  background: url(../images/sizzlepie.jpg) no-repeat -50px -40px;
+}
+
+#frankjr {
+  background: url(../images/frankjr.jpg) no-repeat -50px -40px;
+}
+
+#envision {
+  background: url(../images/envision.jpg) no-repeat -50px -40px;
+}
+
+/************** MEDIA QUERIES ************/
+
+.first-row-first,
+.fourth-row-first,
+.fourth-row-second,
+.fifth-row-first,
+.fifth-row-second,
+.sixth-row-first,
+.seventh-row-first,
+.eighth-row-first,
+.ninth-row-first {
+  visibility: hidden;
+}
+
+@media only screen and (max-width: 930px) {
+  .second-row-fourth {
+    visibility: hidden;
+  }
+
+  .wrap {
+    width: 981px;
+  }
+
+  body {
+    overflow:hidden;
+    overflow-y: visible;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .fourth-row-first {
+    visibility: visible;
+  }
+
+  .third-row-fourth {
+    visibility: hidden;
+  }
+
+  .caption {
+    padding: 0 1em;
+  }
+}
+
+@media only screen and (max-width: 740px) {
+  .fourth-row-second,
+  .fifth-row-second {
+    visibility: visible;
+    cursor: pointer;
+  }
+
+  .second-row-third,
+  .fourth-row-third {
+    visibility: hidden;
+  }
+
+  #third-row #sizzlepie {
+    background: #24a59e;
+  }
+
+  #third-row #sizzlepie:hover {
+    filter: brightness(100%);
+    cursor: default;
+  }
+}
+
+@media only screen and (max-width: 625px) {
+  .third-row-third {
+    visibility: hidden;
+  }
+}
+
+@media only screen and (max-width: 515px) {
+  .logo img {
+    height: 24px;
+    margin: 8px 0 0;
+  }
+
+  .first-row-first,
+  .fifth-row-first,
+  .sixth-row-first {
+    visibility: visible;
+  }
+
+  .second-row-second,
+  .fourth-row-second {
+    visibility: hidden;
+  }
+}
+
+@media only screen and (max-width: 410px) {
+  .first-row-second,
+  .third-row-second,
+  .fifth-row-second {
+    visibility: hidden;
+  }
+
+  .seventh-row-first,
+  .eighth-row-first,
+  .ninth-row-first {
+    visibility: visible;
+  }
+
+  .wrap {
+    margin-left: 2%;
+  }
+
+  .work {
+    height: 155vh;
+  }
+}
+
+.responsive img {
+  max-width: 800px;
+  width: 100%;
+  height: auto;
+}
