@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+<title>Where to Find</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="bxslider/jquery.bxslider.css"/>
+<link rel="stylesheet" href="style.css" type="text/css" media="screen">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar white" id="myNavbar">
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-opennav w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+    <i class="fa fa-bars" style="font-size:28px; padding-top:19px; padding-bottom: 19px;"></i>
+    </a>
+
+    <a href="index.html" class="logo">
+					<img id="myImage" src="images/logosmw.png" height="65" alt="home">
+				</a>
+    <div class="w3-right navitems">
+      <a href="index.html#ciders" class="button w3-hide-small">OUR CIDERS</a>
+      <a href="index.html#about" class="button w3-hide-small">ABOUT US</a>
+      <a href="index.html#news" class="button w3-hide-small">NEWS LETTER</a>
+      <a href="wheretofind.html" class="button w3-hide-small" style="color: #00db00;">WHERE TO FIND</a>
+      <a href="contact.html" class="button w3-hide-small" >CONTACT</a>
+    </div>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+    <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
+    <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
+    <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
+    <a href="#" class="w3-bar-item w3-button">SEARCH</a>
+  </div>
+</div>
+
+<!-- Parallax Image with Title -->
+<div class="bgimg-5 w3-display-container" >
+  <div class="display-mid" >
+    <h2>CURRENTLY SERVERING AT</h2>
+  </div>
+</div>
+
+
+
+
+<script>
+      // Change style of navbar on scroll
+      window.onscroll = function() {myFunction()};
+      function myFunction() {
+          var navbar = document.getElementById("myNavbar");
+          var homelogo = document.getElementById('myImage')
+          if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+              navbar.className = "w3-bar" + " w3-card-2" + " w3-animate-top" + " w3-white";
+              homelogo.src='images/logosm.png';
+          } else {
+              navbar.className = navbar.className.replace(" w3-card-2 w3-animate-top w3-white", "");
+              homelogo.src='images/logosmw.png';
+          }
+      }
+
+
+      // Used to toggle the menu on small screens when clicking on the menu button
+      function toggleFunction() {
+      var x = document.getElementById("navDemo");
+        if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+        } else {
+          x.className = x.className.replace(" w3-show", "");
+        }
+      }
+</script>

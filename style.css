@@ -22,18 +22,20 @@ time, mark, audio, video {
 body,h4,h5,h6 {font-family: "Lato", sans-serif;}
 body, html {
     height: 100%;
-    color: #777;
+    color: #d2d1d1;
     line-height: 1.8;
 }
 
-p.light {
-  color: #fff;
+
+
+p.dark {
+  color: #000;
 }
 
 
 h1 {
     font-family: 'Oswald', sans-serif;
-    font-size: 60px;
+    font-size: 60x;
     text-align: center;
     height: 100%;
     color: #000;
@@ -43,12 +45,18 @@ h1 {
 
   h2 {
       font-family: 'Oswald', sans-serif;
-      font-size: 70px;
+      font-size: 35px;
       font-weight: bold;
       text-align: center;
       height: 100%;
       color: #fff;
-    }
+}
+
+@media (min-width: 800px) {
+  h2{
+font-size: 60px;}
+}
+
 
   h3 {
       font-family: 'Oswald', sans-serif;
@@ -65,7 +73,7 @@ h1 {
     button.green {background-color: #00db00; color: #fff;}
 
 /* Create a Parallax Effect */
-.bgimg-1, .bgimg-2, .bgimg-3 {
+.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5 {
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -78,16 +86,27 @@ h1 {
     min-height: 75%;
 }
 
-/* Second image (Portfolio) */
+/* Second image (Our Ciders) */
 .bgimg-2 {
     background-image: url('images/ciderbckgrnd.jpg');
     min-height: 30%;
 }
 
-/* Third image (Contact) */
+/* Third image (About Us) */
 .bgimg-3 {
     background-image: url('images/aboutbckgrnd.jpg');
     min-height: 100%;
+}
+
+/* Fourth image (Contact) */
+.bgimg-4 {
+    background-image: url('images/contact.jpg');
+    min-height: 45%;
+}
+
+.bgimg-5 {
+    background-image: url('images/where.jpg');
+    min-height: 45%;
 }
 
 .w3-wide {letter-spacing: 10px;}
@@ -95,7 +114,47 @@ h1 {
 
 /* Turn off parallax scrolling for tablets and phones */
 @media only screen and (max-device-width: 1024px) {
-    .bgimg-1, .bgimg-2, .bgimg-3 {
+    .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5 {
         background-attachment: scroll;
     }
 }
+
+
+
+
+.logo img {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.navitems a {
+  padding:31px 20px;float:left;
+  background-color:inherit;
+  width:auto;
+  border:none;
+  outline:none;
+  display:block;
+}
+
+
+
+.button{border:none;display:inline-block;outline:0;padding:6px 16px;vertical-align:middle;overflow:hidden;text-decoration:none!important;background-color:#000;text-align:center;cursor:pointer;white-space:nowrap}
+
+.button:hover{color:#000!important;background-color:#ccc!important}
+
+
+
+
+.display-mid{
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+}
+
+.padding-mid{padding-top:20%!important;}
+
+
+/* embed map */
+.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }

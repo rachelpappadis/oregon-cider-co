@@ -13,20 +13,26 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="bxslider/jquery.bxslider.css"/>
 <link rel="stylesheet" href="style.css" type="text/css" media="screen">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 
 <body>
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
-  <div class="w3-bar" id="myNavbar">
+  <div class="w3-bar white" id="myNavbar">
     <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-opennav w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+    <i class="fa fa-bars" style="font-size:28px; padding-top:19px; padding-bottom: 19px;"></i>
     </a>
-    <a href="#home" class="w3-bar-item w3-button">HOME</a>
-    <a href="#ciders" class="w3-bar-item w3-button w3-hide-small">OUR CIDERS</a>
-    <a href="#about" class="w3-bar-item w3-button w3-hide-small">ABOUT US</a>
-    <a href="#news" class="w3-bar-item w3-button w3-hide-small">NEWS LETTER</a>
-    <a href="#contact" class="w3-bar-item w3-button w3-hide-small">CONTACT</a>
-
+    <a href="index.html" class="logo">
+					<img id="myImage" src="images/logosm.png" height="65" alt="home" >
+				</a>
+    <div class="w3-right navitems" style="color: #000;">
+      <a href="#ciders" class="button w3-hide-small">OUR CIDERS</a>
+      <a href="#about" class="button w3-hide-small">ABOUT US</a>
+      <a href="#news" class="button w3-hide-small">NEWS LETTER</a>
+      <a href="wheretofind.html" class="button w3-hide-small">WHERE TO FIND</a>
+      <a href="contact.html" class="button w3-hide-small">CONTACT</a>
+    </div>
   </div>
 
   <!-- Navbar on small screens -->
@@ -40,7 +46,7 @@
 
 <!-- First Parallax Image with Logo Text -->
 <div class="bgimg-1 w3-display-container" id="home">
-  <div class="w3-display-middle" >
+  <div class="display-mid" >
     <img src="images/logo.png" height="325" alt="logo">
   </div>
 </div>
@@ -50,7 +56,7 @@
   <h3 class="w3-center">CURRENTLY SERVING AT:</h3></div>
 
   <ul id="featured">
-    <li><img src="images/2.jpg" ></li>
+    <li><img src="images/1.jpg" ></li>
     <li><img src="images/2.jpg" ></li>
   </ul>
 
@@ -77,7 +83,7 @@
   <div class="w3-content w3-container w3-padding-64" >
     <h3 class="w3-center">Cider pics go here</h3>
 
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    <p class="dark">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
       quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
       qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br><br><br><br><br><br><br>..</p>
 </div>
@@ -85,9 +91,9 @@
 
       <!-- Third Parallax Image with Portfolio Text -->
       <div class="bgimg-3 w3-display-container" id="about">
-<div class="w3-display-middle" >
+<div class="w3-container  w3-content padding-mid" >
           <h2>ABOUT US</h2>
-          <p class="light">
+          <p>
            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
             quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
             qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -97,7 +103,7 @@
       <div class="w3-content w3-container w3-padding-64" id="news" >
         <h2 class="green">CIDER UPDATES</h2>
 
-        <p class="w3-center" style="margin-bottom: 23px; margin-top:-13px">Sign up for our newsletter to get updates about tasting, tap rooms, events, and everything cider!</p>
+        <p class="w3-center dark" style="margin-bottom: 23px; margin-top:-13px">Sign up for our newsletter to get updates about tasting, tap rooms, events, and everything cider!</p>
         <form action="/action_page.php" target="_blank">
           <div class="w3-row-padding" style="margin:0 -16px 25px -16px">
               <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
@@ -131,11 +137,25 @@
       window.onscroll = function() {myFunction()};
       function myFunction() {
           var navbar = document.getElementById("myNavbar");
+          var homelogo = document.getElementById('myImage')
           if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
               navbar.className = "w3-bar" + " w3-card-2" + " w3-animate-top" + " w3-white";
+              homelogo.src='images/logosm.png';
           } else {
               navbar.className = navbar.className.replace(" w3-card-2 w3-animate-top w3-white", "");
+              homelogo.src='images/logosmw.png';
           }
+      }
+
+
+      // Used to toggle the menu on small screens when clicking on the menu button
+      function toggleFunction() {
+      var x = document.getElementById("navDemo");
+        if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+        } else {
+          x.className = x.className.replace(" w3-show", "");
+        }
       }
 </script>
 
